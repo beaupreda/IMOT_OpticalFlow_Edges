@@ -7,6 +7,13 @@ Place::Place()
 {
 }
 
+Place::Place(std::string subFolder, std::string backgroundFolder, std::string maskName)
+{
+    subFolder_ = subFolder;
+    backgroundFolder_ = backgroundFolder;
+    maskName_ = maskName;
+}
+
 Place::Place(string folder, string subFolder, string backgroundFolder,
              string maskName, int backgroundOffset)
 {
@@ -78,4 +85,14 @@ void Place::addBackgroundImage(const Mat& backgroundImage)
 void Place::setMask(const cv::Mat& mask)
 {
     mask_ = mask;
+}
+
+void Place::setFolder(const std::string& folder)
+{
+    folder_ = folder;
+}
+
+void Place::setBackgroundOffset(const int backgroundOffset)
+{
+    backgroundOffset_ = backgroundOffset;
 }

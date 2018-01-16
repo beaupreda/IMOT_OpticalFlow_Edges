@@ -27,6 +27,7 @@ class Place
 public:
 
     Place();
+    Place(std::string subFolder, std::string backgroundFolder, std::string maskName);
     Place(std::string folder, std::string subFolder, std::string backgroundFolder,
           std::string maskName, int backgroundOffset);
 
@@ -43,6 +44,8 @@ public:
     void addBackgroundFrames(const std::vector<std::string>& backgroundFrames);
     void addBackgroundImage(const cv::Mat& backgroundImage);
     void setMask(const cv::Mat& mask);
+    void setFolder(const std::string& folder);
+    void setBackgroundOffset(const int backgroundOffset);
 
 private:
 

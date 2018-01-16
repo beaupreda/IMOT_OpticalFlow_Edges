@@ -3,15 +3,57 @@
 
 #include "detection/Detector.h"
 
+#define PLACE 1
+
 using namespace cv;
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
+    if (argc != 2)
+    {
+        cerr << "Incorrect number of arguments (program + dataset)" << endl;
+        return 0;
+    }
+
+    shared_ptr<Place> place (new Place("frames/", "backgrounds/", "mask.png"));
+
+    string argument = argv[PLACE];
+
+    if (argument == "help")
+    {
+        cout << "To call the demo, please use: ./IMOT_OpticalFlow_Edges DATASET" << endl;
+        cout << "where DATASET is either rouen, rene, sherbrooke or stmarc" << endl;
+        return 0;
+    }
+    else if (argument == "rouen")
+    {
+        place->setFolder("rouen/");
+        place->setBackgroundOffset(BG_OFFSET_ZERO);
+    }
+    else if (argument == "rene")
+    {
+        place->setFolder("rene/");
+        place->setBackgroundOffset(BG_OFFSET_ONE);
+    }
+    else if (argument == "sherbrooke")
+    {
+        place->setFolder("sherbrooke/");
+        place->setBackgroundOffset(BG_OFFSET_ZERO);
+    }
+    else if (argument == "stmarc")
+    {
+        place->setFolder("stmarc/");
+        place->setBackgroundOffset(BG_OFFSET_ZERO);
+    }
+    else
+    {
+        cerr << "Invalid input arguments" << endl;
+        return 0;
+    }
+
     shared_ptr<Detector> detector (new Detector());
     shared_ptr<FileOperations> fileOperator (new FileOperations());
-
-    shared_ptr<Place> place (new Place("rouen/", "frames/", "backgrounds/", "mask.png", BG_OFFSET_ZERO));
 
     Mat backgroundImage = detector->getEdgeProcessor()->createBackgroundImage(place, fileOperator);
 
