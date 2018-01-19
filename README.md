@@ -42,5 +42,3 @@ If you find any bugs or encounter any problem, feel free to contact me at david-
 ## License
 See the LICENSE file for more details.
 
-## Acknowledgments
-Fast Optical Flow using Dense Inverse Search (see the of_dis folder for more detail on their work).
