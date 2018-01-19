@@ -3,8 +3,8 @@
 ## Running the demo
 
 ### Dependencies
-- OpenCV
-- Eigen3
+- [OpenCV](https://opencv.org/)
+- [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
 ### Data
 You need both the frames and background subtraction images avaiable at [https://www.jpjodoin.com/urbantracker/dataset.html].
@@ -41,3 +41,5 @@ If you find any bugs or encounter any problem, feel free to contact me at david-
 ## License
 See the LICENSE file for more details.
 
+## Acknowledgments
+Fast Optical Flow using Dense Inverse Search (see the of_dis folder for more detail on their work).
