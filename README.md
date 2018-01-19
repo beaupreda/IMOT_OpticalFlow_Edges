@@ -36,7 +36,7 @@ You will need both the Urban Tracker and the Metric Tools avaiable at [https://w
 Follow the steps for the tracker, but take the background subtraction images produced by the algorithm (the ones in the results folder).
 
 ## Bugs
-If you find any bugs or encounter any problem, feel free to contact me at [david-alexandre.beaupre@polymtl.ca].
+If you find any bugs or encounter any problem, feel free to contact me at david-alexandre.beaupre@polymtl.ca
 
 ## License
 See the LICENSE file for more details.
