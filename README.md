@@ -5,6 +5,7 @@
 ### Dependencies
 - [OpenCV](https://opencv.org/)
 - [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
+- [CMake](https://cmake.org/)
 
 ### Data
 You need both the frames and background subtraction images avaiable at [https://www.jpjodoin.com/urbantracker/dataset.html].
